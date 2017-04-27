@@ -1,0 +1,3 @@
+-Crear la BBDD con el archivo "localhost.sql".
+-Crear usuariio "prueba" con contraseña "prueba" y todos los privilegios.
+-Ejecutar "index.php" en servidor loca.l
