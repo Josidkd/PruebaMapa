@@ -51,12 +51,21 @@
 		<div class="col-md-12 text-center">
 			<h1>Ciudades de España</h1>
 			<br><br>
-			<form>
-				<label for="provincias">Comunidad: </label>
-				<input id="buscador" placeholder="escribe..">
-				<input id="btnBuscar" type="button" name="Buscar" value="Buscar">
+			<form text-left">
+				<div class="col-md-12 text-left">
+					<label for="provincias">Comunidad: </label>
+				</div>
+				<div class="col-md-10">
+					<input id="buscador" placeholder="escribe..">
+				</div>
+				<div class="col-md-2">
+					<input id="btnBuscar" type="button" name="Buscar" value="BUSCAR">
+				</div>
 			</form>
-			<div id="mapa"></div>
+			<div class="col-md-12 text-center">
+				<h2 id="nombreComunidad" class="txtComunidad"></h2>
+			</div>
+			<div id="mapa" class="col-md-12 text-left"></div>
 		</div>
 	</div>
 	<!-- Carga js -->
@@ -77,7 +86,8 @@
 	$('#btnBuscar').on('click', function(event) {
 		var seleccionado = $("#buscador").val();
 		var marcadores = "";
-		if(seleccionado == "Andalucia"){
+		if(seleccionado == "Andalucía"){
+			$("#nombreComunidad").html("Andalucía");
 			marcadores =[
 			['Huelva', 37.261421 , -6.944722400000046],
 			['Sevilla', 37.3890924, -5.984458899999936],
@@ -89,7 +99,8 @@
 			['Cádiz', 36.5270612, -6.288596200000029]
 			];
 		}
-		if(seleccionado == "Aragon"){
+		if(seleccionado == "Aragón"){
+			$("#nombreComunidad").html("Aragón");
 			marcadores =[
 			['Huesca', 42.131845, -0.40780580000000555],
 			['Zaragoza', 41.6488226, -0.8890853000000334],
@@ -97,27 +108,32 @@
 			];
 		}
 		if(seleccionado == "Asturias, Principado de"){
+			$("#nombreComunidad").html("Principado de Asturias");
 			marcadores =[
 			['Asturias', 43.3613953, -5.859326699999997]
 			];
 		}
 		if(seleccionado == "Balears, Illes"){
+			$("#nombreComunidad").html("Islas Baleares");
 			marcadores =[
 			['Baleares', 39.5341789, 2.857710499999939]
 			];
 		}
 		if(seleccionado == "Canarias"){
+			$("#nombreComunidad").html("Canarias");
 			marcadores =[
 			['Santa Cruz de Tenerife', 28.4636296, -16.251846699999987],
 			['Las Palmas', 28.1235459, -15.436257399999931]
 			];
 		}
 		if(seleccionado == "Cantabria"){
+			$("#nombreComunidad").html("Cantabria");
 			marcadores =[
 			['Cantabria', 43.1828396, -3.9878426999999874]
 			];
 		}
 		if(seleccionado == "Castilla y León"){
+			$("#nombreComunidad").html("Castilla y León");
 			marcadores =[
 			['León', 42.5987263, -5.567095900000027],
 			['Palencia', 42.0096857, -4.528801599999952],
@@ -131,6 +147,7 @@
 			];
 		}
 		if(seleccionado == "Castilla - La Mancha"){
+			$("#nombreComunidad").html("Castilla la Mancha");
 			marcadores =[
 			['Guadalajara', 40.632489, -3.1601699999999937],
 			['Cuenca', 40.0703925, -2.1374161999999615],
@@ -140,6 +157,7 @@
 			];
 		}
 		if(seleccionado == "Catalunya"){
+			$("#nombreComunidad").html("Cataluña");
 			marcadores =[
 			['Lleida', 41.6175899, 0.6200145999999904],
 			['Girona', 41.9794005, 2.821426400000064],
@@ -148,6 +166,7 @@
 			];
 		}
 		if(seleccionado == "Comunitat Valenciana"){
+			$("#nombreComunidad").html("Comunidad Valenciana");
 			marcadores =[
 			['Castellón', 39.9863563, -0.051324600000043574],
 			['Valencia', 39.4699075, -0.3762881000000107],
@@ -155,12 +174,14 @@
 			];
 		}
 		if(seleccionado == "Extremadura"){
+			$("#nombreComunidad").html("Extremadura");
 			marcadores =[
 			['Caceres', 39.4752765, -6.3724247000000105],
 			['Badajoz', 38.8794495, -6.970653500000026]
 			];
 		}
 		if(seleccionado == "Galicia"){
+			$("#nombreComunidad").html("Galicia");
 			marcadores =[
 			['La Coruña', 43.3623436, -8.411540100000025],
 			['Lugo', 43.0097384, -7.55675819999999],
@@ -169,34 +190,41 @@
 			];
 		}
 		if(seleccionado == "Madrid, Comunidad de"){
+			$("#nombreComunidad").html("Comunidad de Madrid");
 			marcadores =[
 			['Madrid', 40.4167754, -3.7037901999999576]
 			];
 		}if(seleccionado == "Murcia, Región de"){
+			$("#nombreComunidad").html("Región de Murcia");
 			marcadores =[
 			['Murcia', 37.9922399, -1.1306544000000258]
 			];
 		}
 		if(seleccionado == "Navarra, Comunidad Foral de"){
+			$("#nombreComunidad").html("Comunidad Foral de Navarra");
 			marcadores =[
 			['Navarra', 42.6953909, -1.6760690999999497]
 			];
 		}if(seleccionado == "País Vasco"){
+			$("#nombreComunidad").html("País Vasco");
 			marcadores =[
 			['Vizcaya', 43.2204286, -2.69838679999998],
 			['Gipúzcoa', 43.0756299, -2.223666699999967],
 			['Alava', 42.9099989, -2.69838679999998]
 			];
 		}if(seleccionado == "Rioja, La"){
+			$("#nombreComunidad").html("La Rioja");
 			marcadores =[
 			['La Rioja', 42.2870733, -2.5396029999999428]
 			];
 
 		}if(seleccionado == "Ceuta"){
+			$("#nombreComunidad").html("Ceuta");
 			marcadores =[
 			['Ceuta', 35.8893874, -5.321345500000007]
 			];
 		}if(seleccionado == "Melilla"){
+			$("#nombreComunidad").html("Melilla");
 			marcadores =[
 			['Melilla', 35.2922775, -2.9380972999999813]
 			];

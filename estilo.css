@@ -1,18 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Eagle+Lake');
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 body{
-	background-color: #380000;
+	background-color: #4c57db;
 	color: white;
-	font-family: 'Eagle Lake', cursive;
+	font-family: 'Patua One', cursive;
+}
+.txtComunidad{
+	font-family: 'Kaushan Script', cursive;
 }
 input{
-	background-color: #800202;
-	color: white;
-	border: 2px solid white;
+	background-color: white;
+	color: black;
+	border: 1px solid white;
 	padding: 5px;
-	border-radius: 10px;
+	border-radius: 4px;
+	width: 104%;
+	margin-bottom: 6px;
+}
+#btnBuscar{
+	background-color: #9da3e5;
 }
 #btnBuscar:hover {
-	background-color: #380000;
+	background-color: #4c57db;
 }
 #mapa{
 	height: 50vh;
